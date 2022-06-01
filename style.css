@@ -1,0 +1,142 @@
+:root {
+    font-size: 20px;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family:'Courier New', Courier, monospace;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    /* overflow: hidden; */
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+    display: block;
+    padding-top: 5rem;
+    background-image: url(./images/jimv026_crown_1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+main {
+    padding: 2rem 0;
+    width: 100%;
+    background-color: #222;
+}
+
+footer {
+    width: 100%;
+    height: minmax(60px, 120px);
+    background-color: #111;
+    text-align: center;
+    color: #ddd;
+    letter-spacing: 5px;
+    padding: 1rem;
+    font-size: minmax(.5rem, 1.5rem);
+}
+
+h4 > a {
+    color: #ddd;
+}
+
+h4 > a:visited {
+    color: #999
+}
+
+h4 > a:hover {
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: .5s linear
+}
+
+#figure_logo, #socials__links {
+    min-width: 200px;
+    max-width: 500px;
+    width: 30%;
+}
+
+#figure_logo {
+    margin: auto;
+}
+
+#figure_logo:hover {
+    transform: scale(1.2);
+    transition: .5s ease-in-out
+}
+
+#logo__img{
+    width: 100%;
+    border-radius: 50%;
+}
+
+#socials__links {
+    margin: 2rem auto;
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#socials__links > a {
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: none;
+    padding: 5px;
+}
+
+#socials__links > a:hover {
+    background-color: #ddd;
+    border-radius: 10px;
+}
+
+
+#grid__container {
+    background-image: url(./images/jimv026_flower_7.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    grid-template-rows: repeat(4, minmax(200px, 1fr));
+    grid-auto-rows: minmax(200px, 1fr);
+    align-content: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem 1rem;
+}
+
+.grid__item >img {
+    width: 100%;
+    object-fit: cover;
+    border: 10px solid #222;
+}
+
+.grid__item:hover {
+    transform: scale(1.5);
+    transition: .5s ease-in-out
+}
+
+@media (max-width: 800px) {
+    #grid__container {
+        grid-template-columns: repeat(2, minmax(200px, 1fr));
+        grid-template-rows: repeat(6, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 550px) {
+    #grid__container {
+        grid-template-columns: minmax(200px, 1fr);
+        grid-template-rows: repeat(8, minmax(200px, 1fr)); 
+    }
+}
